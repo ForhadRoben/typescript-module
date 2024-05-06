@@ -25,6 +25,7 @@
     const createPromise = (): Promise<Something> => {
         return new Promise<Something>((resolve, reject) => {
             const data: Something = { something: 'something' };
+            // const data:string = null;
             if (data) {
                 resolve(data);
             } else {
