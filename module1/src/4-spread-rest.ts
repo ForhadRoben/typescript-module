@@ -1,34 +1,36 @@
 {
-    //spread operator
-    //array example
-    const bros1: string[] = ['mir', 'firoz', 'mizan']
-    const bros2: string[] = ['tanmoy', 'nahid', 'rahat']
-    bros1.push(...bros2)
+  //spread operator
+  //array example
+  const bros1: string[] = ["mir", "firoz", "mizan"];
+  const bros2: string[] = ["tanmoy", "nahid", "rahat"];
+  const bros = bros1.push(...bros2); //array.push length return kore
+  console.log(bros);
 
-    // object example
+  const result: string[] = [...bros1];
+  console.log(result);
 
-    const mentors1 = {
-        ts: 'mezba',
-        redux: 'mir',
-        dbms: 'mizan'
-    }
+  // object example
 
-    const mentors2 = {
-        prisma: 'firoz',
-        cloud: 'nahid',
-        next: 'tanmoy'
+  const mentors1 = {
+    ts: "mezba",
+    redux: "mir",
+    dbms: "mizan",
+  };
 
-    }
-    const mentorList = {
-        ...mentors1, ...mentors2
-    }
+  const mentors2 = {
+    prisma: "firoz",
+    cloud: "nahid",
+    next: "tanmoy",
+  };
+  const mentorList = {
+    ...mentors1,
+    ...mentors2,
+  };
 
-    // rest operator
-    const greetFriends = (...friends: string[]) => {
-        // console.log(`Hi ${friend1} ${friend2} ${friend3}`);
-        friends.forEach((friend: string) => console.log(`Hi ${friend}`))
-    };
-    greetFriends('abul', 'babul', 'kabul')
-
-
+  // rest operator
+  const greetFriends = (...friends: string[]) => {
+    // console.log(`Hi ${friend1} ${friend2} ${friend3}`);
+    friends.forEach((friend: string) => console.log(`Hi ${friend}`));
+  };
+  greetFriends("abul", "babul", "kabul");
 }
